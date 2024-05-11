@@ -6,6 +6,6 @@ public class Main {
         sc.useDelimiter(":"); // : 기준으로 잘라서 입력 받겠다는 뜻
         int h = sc.nextInt();
         int m = sc.nextInt();
-        System.out.println(h + "\n" + m);
+        System.out.println(h + 1 + ":" + m);
     }
 }
