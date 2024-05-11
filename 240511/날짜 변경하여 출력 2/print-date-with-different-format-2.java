@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
         String[] str = s.split("-");
-        System.out.println(str[2]+"."+str[1]+"."+str[0]);
+        System.out.println(str[2]+"."+str[0]+"."+str[1]);
         // 여기에 코드를 작성해주세요.
     }
 }
