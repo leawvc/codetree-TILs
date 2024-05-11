@@ -9,7 +9,7 @@ public class Main {
         temp = s;
         s = t;
         t = temp;
-        System.out.println(t);
         System.out.println(s);
+        System.out.println(t);
     }
 }
