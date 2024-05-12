@@ -10,7 +10,7 @@ public class Main {
         }else if(n >= 1000){
             System.out.print("mask");
         }else{
-            System.out.print(0);
+            System.out.print("no");
         }
     }
 }
