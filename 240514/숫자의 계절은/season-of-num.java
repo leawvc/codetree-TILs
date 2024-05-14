@@ -6,11 +6,11 @@ public class Main {
 
         int m = sc.nextInt();
 
-        if(m <= 2 && m == 12)
+        if(m <= 2 || m == 12)
             System.out.print("Winter");
-        else if(3 <= m && m <= 5)
+        else if(3 <= m || m <= 5)
             System.out.print("Spring");
-        else if(6 <= m && m <= 8)
+        else if(6 <= m || m <= 8)
             System.out.print("Summer");
         else
             System.out.print("Fall");
