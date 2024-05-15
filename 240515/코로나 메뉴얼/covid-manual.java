@@ -31,5 +31,7 @@ public class Main {
             else
                 System.out.println("N");
         }
+        else
+            System.out.println("N");
     }
 }
