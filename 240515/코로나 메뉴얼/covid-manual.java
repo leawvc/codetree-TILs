@@ -18,20 +18,16 @@ public class Main {
         c = sc.nextInt();
         
         if(a_t == 'Y' && a >= 37) {
-            if(b_t == 'Y' && b >= 37)
-                System.out.println("E");
-            else if(c_t == 'Y' && c >= 37)
+            if((b_t == 'Y' && b >= 37) || (c_t == 'Y' && c >= 37))
                 System.out.println("E");
             else
                 System.out.println("N");
         }
-        else if(b_t == 'Y' && b >= 37){
-            if(c_t == 'Y' && c >= 37)
+        else {
+            if((c_t == 'Y' && c >= 37) && (b_t == 'Y' && b >= 37))
                 System.out.println("E");
             else
                 System.out.println("N");
         }
-        else
-            System.out.println("N");
     }
 }
