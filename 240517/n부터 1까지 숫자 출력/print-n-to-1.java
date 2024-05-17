@@ -8,7 +8,7 @@ public class Main {
 
         while(n >= 1){
             System.out.print(n +" ");
-            i--;
+            n--;
         }
     }
 }
