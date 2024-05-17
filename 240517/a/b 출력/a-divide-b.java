@@ -9,6 +9,14 @@ public class Main {
         a = sc.nextInt();
         b = sc.nextInt();
 
-        System.out.printf("%.20f", (double)a / b);
+        a *= 10;
+        System.out.print("0.");
+        for(int i = 0; i < 20; i++){
+            if(a > b)
+                System.out.print(a / b);
+            else
+                System.out.print(a % b);
+            a %= b;
+        }
     }
 }
