@@ -9,11 +9,11 @@ public class Main {
         a = sc.nextInt();
         b = sc.nextInt();
 
-        int cnt = 0;
+        int sumVal = 0;
 
         for(int i = a; i <= b; i++){
-            cnt += a;
+            sumVal += i;
         }
-        System.out.print(cnt);
+        System.out.print(sumVal);
     }
 }
