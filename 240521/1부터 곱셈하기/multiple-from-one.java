@@ -9,7 +9,7 @@ public class Main {
         a = sc.nextInt();
 
         for (int i = 1; i <= 10; i++) {
-            if(prod > a)
+            if(prod >= a)
                 break;
             prod *= i;
             cnt++;
