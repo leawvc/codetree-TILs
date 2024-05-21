@@ -4,16 +4,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int n, cnt = 0;
+        int n = sc.nextInt();
+        int cnt = 0;
 
-        n = sc.nextInt();
-
-        for(int i = 1; i<= n; i++){
+        for(int i = 1; n > 1; i++) {
             n /= i;
             cnt++;
-            if(n / i <= 1)
-                break;
         }
+
         System.out.print(cnt);
     }
 }
