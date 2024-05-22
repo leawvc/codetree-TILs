@@ -10,6 +10,7 @@ public class Main {
             a = sc.nextInt();
             if(a == 25){
                 System.out.println("Good");
+                break;
             }else if(a > 25){
                 System.out.println("Lower");
             }else
