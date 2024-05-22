@@ -3,15 +3,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n, i = 1;
+        int n, i = 1, cnt = 0;
         
         n = sc.nextInt();
 
         while (true) {
-            if(n / i == i)
+            if(n == i)
                 break;
-            i++;
+            i *= 2;
+            cnt++;
         }
-        System.out.println(i);
+        System.out.println(cnt);
     }
 }
