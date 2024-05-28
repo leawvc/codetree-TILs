@@ -10,7 +10,7 @@ public class Main {
             for(int j = 0; j < i + 1; j++){
                 System.out.print((char)(65 + cnt));
                 cnt++;
-                if(cnt == 27)
+                if(cnt == 26)
                     cnt = 0;
             }
             System.out.println();
