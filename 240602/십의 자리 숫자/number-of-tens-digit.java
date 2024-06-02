@@ -6,7 +6,9 @@ public class Main {
         int[] arr = new int[10];
         int[] countArr = new int[10];
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
+            if(arr[i] == 0)
+                break;
             arr[i] = sc.nextInt();
             countArr[arr[i] / 10]++;
         }
