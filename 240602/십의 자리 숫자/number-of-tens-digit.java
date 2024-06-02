@@ -10,7 +10,7 @@ public class Main {
             arr[i] = sc.nextInt();
             if(arr[i] == 0)
                 break;
-            countArr[arr[i] / 10]++;
+            countArr[(arr[i] / 10)]++;
         }
 
         for (int i = 1; i <= 9; i++) {
