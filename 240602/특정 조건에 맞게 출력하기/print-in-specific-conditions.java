@@ -7,8 +7,6 @@ public class Main {
 
         for(int i = 0; i < 100; i++){
             arr[i] = sc.nextInt();
-        }
-        for(int i = 0; i < 100; i ++){
             if(arr[i] == 0)
                 break;
             if(arr[i] % 2 != 0)
