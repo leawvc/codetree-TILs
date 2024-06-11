@@ -4,7 +4,7 @@ public class Main {
     public static boolean isMagicNumber(int n) {
         if(n % 3 == 0)
             return true;
-        while(n != 0){
+        while(n != 0) {
             if((n % 10) % 3 == 0)
                 return true;
             n /= 10;
@@ -19,9 +19,10 @@ public class Main {
 
         int cnt = 0;
 
-        for(int i = n; i <= m; i++)
+        for(int i = n; i <= m; i++) {
             if(isMagicNumber(i))
                 cnt++;
+        }
 
         System.out.println(cnt);
     }
