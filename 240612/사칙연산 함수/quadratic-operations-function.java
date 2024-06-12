@@ -10,11 +10,11 @@ public class Main {
 
         if(o == '+')
             System.out.printf("%d %s %d = %d",a,o,c,(a + c));
-        if(o == '-')
+        else if(o == '-')
             System.out.printf("%d %s %d = %d",a,o,c,(a - c));
-        if(o == '/')
+        else if(o == '/')
             System.out.printf("%d %s %d = %d",a,o,c,(a / c));
-        if(o == '*')
+        else if(o == '*')
             System.out.printf("%d %s %d = %d",a,o,c,(a * c));
         else
             System.out.print("False");
