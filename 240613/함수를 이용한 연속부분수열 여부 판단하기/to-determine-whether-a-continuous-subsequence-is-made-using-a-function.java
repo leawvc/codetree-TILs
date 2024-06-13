@@ -30,9 +30,16 @@ public class Main {
         for(int i = 0; i < b; i++){
             arr1[i] = sc.nextInt();
         }
-        if(onjeon(arr, arr1))
-            System.out.print("Yes");
-        else
-            System.out.print("No");
+        if(arr.length >= arr1.length){
+            if(onjeon(arr, arr1))
+                System.out.print("Yes");
+            else
+                System.out.print("No");
+        }else{
+            if(onjeon(arr1, arr))
+                System.out.print("Yes");
+            else
+                System.out.print("No");
+        }
     }
 }
