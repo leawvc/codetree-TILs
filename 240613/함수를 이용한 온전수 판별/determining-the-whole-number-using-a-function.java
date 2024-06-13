@@ -14,7 +14,7 @@ public class Main {
         int cnt = 0;
 
         for(int i = a; i <= b; i++){
-            if(onjeon(a))
+            if(onjeon(i))
                 cnt++;
         }
         System.out.print(cnt);
