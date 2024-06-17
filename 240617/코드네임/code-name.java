@@ -20,12 +20,15 @@ public class Main {
         Scanner sc = new Scanner(System.in); 
 
         CodeName[] CodeNames = new CodeName[5];
-        int min = 100;
+        int min;
+        int max = 100;
         for(int i = 0; i < 5; i++) {
             char code = sc.next().charAt(0);
             int point = sc.nextInt();
-            if(point <= min)
+            if(point <= max){
+                max = point;
                 min = i;
+            }
             CodeNames[i] = new CodeName(code, point);
         }
 
