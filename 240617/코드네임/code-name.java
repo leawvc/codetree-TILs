@@ -20,7 +20,7 @@ public class Main {
         Scanner sc = new Scanner(System.in); 
 
         CodeName[] CodeNames = new CodeName[5];
-        int min;
+        int min = 0;
         int max = 100;
         for(int i = 0; i < 5; i++) {
             char code = sc.next().charAt(0);
