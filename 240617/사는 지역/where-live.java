@@ -16,7 +16,7 @@ public class Main {
 
         int n = sc.nextInt();
 
-        Resion [] resions = new Resion[5];
+        Resion [] resions = new Resion[n];
 
         for(int i = 0; i < n; i++){
             String name = sc.next();
