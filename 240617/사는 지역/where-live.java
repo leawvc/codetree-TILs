@@ -4,12 +4,6 @@ class Resion{
 
     String name, bun, place;
 
-    public Resion(){
-        this.name = "0";
-        this.bun = "0";
-        this.place = "0";
-    }
-
     public Resion(String name, String bun, String place){
         this.name = name;
         this.bun = bun;
