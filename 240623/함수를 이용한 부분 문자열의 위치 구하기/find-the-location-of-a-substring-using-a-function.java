@@ -21,6 +21,9 @@ import java.util.Scanner;
                         break;
                     }
                 }
+                if (start != -1) {
+                    break;
+                }
             }
         }
         if(start == 0)
