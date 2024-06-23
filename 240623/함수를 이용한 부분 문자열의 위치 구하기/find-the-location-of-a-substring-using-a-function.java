@@ -11,7 +11,7 @@ import java.util.Scanner;
 
         int len = str.length();
         int len1 = str1.length();
-        int start = -1;
+        int start = 0;
         for(int i = 0; i <= len - len1; i++){
             if(str.charAt(i) == str1.charAt(0)){
                 start = i;
@@ -19,6 +19,7 @@ import java.util.Scanner;
                     if(str.charAt(j + i) != str1.charAt(j))
                         start = -1;
                 }
+                if(start != -1)
             }
         }
         if(start == -1)
