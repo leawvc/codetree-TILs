@@ -1,6 +1,6 @@
 import java.util.Scanner;
- 
- public class Main {
+
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -9,22 +9,22 @@ import java.util.Scanner;
 
         int len = str.length();
         int len1 = str1.length();
-        int start = 0, cnt = 0;
-        for(int i = 0; i <= len - len1; i++){
-            start = -1;
-            if(str.charAt(i) == str1.charAt(0)){
-                start = i;
-                for(int j = 0; j < len1; j++){
-                    if(str.charAt(j + i) == str1.charAt(j))
-                        cnt++;
-                }
-                if(cnt == len1)
+        int start = -1;
+
+        for (int i = 0; i <= len - len1; i++) {
+            boolean match = true;
+            for (int j = 0; j < len1; j++) {
+                if (str.charAt(i + j) != str1.charAt(j)) {
+                    match = false;
                     break;
+                }
+            }
+            if (match) {
+                start = i;
+                break;
             }
         }
-        if(start == -1)
-            System.out.print(-1);
-        else
-            System.out.print(start);
+
+        System.out.print(start);
     }
 }
