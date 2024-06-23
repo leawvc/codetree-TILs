@@ -19,8 +19,9 @@ import java.util.Scanner;
                     if(str.charAt(j + i) != str1.charAt(j))
                         start = -1;
                 }
-                if(start != -1)
             }
+            if(start != -1)
+                    break;
         }
         if(start == -1)
             System.out.print(-1);
