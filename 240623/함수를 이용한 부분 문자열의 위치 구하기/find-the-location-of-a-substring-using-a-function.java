@@ -16,8 +16,10 @@ import java.util.Scanner;
             if(str.charAt(i) == str1.charAt(0)){
                 start = i;
                 for(int j = 0; j < len1; j++){
-                    if(str.charAt(j + i) != str1.charAt(j))
+                    if(str.charAt(j + i) != str1.charAt(j)){
                         start = -1;
+                        break;
+                    }
                 }
             }
         }
