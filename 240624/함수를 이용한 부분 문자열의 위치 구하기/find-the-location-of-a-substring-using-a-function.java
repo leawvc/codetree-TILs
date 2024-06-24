@@ -11,14 +11,14 @@ import java.util.Scanner;
         int len1 = str1.length();
         int start = 0;
         for(int i = 0; i <= len - len1; i++){
-            start = -1;
             if(str.charAt(i) == str1.charAt(0)){
                 start = i;
                 int cnt = 0;
                 for(int j = 0; j < len1; j++){
                     if(str.charAt(j + i) == str1.charAt(j)){
                         cnt++;
-                    }
+                    }else
+                        start = -1;
                 }
                 if(cnt == len1)
                     break;
