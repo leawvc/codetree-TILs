@@ -15,25 +15,34 @@ public class Main {
         for(int i = 0; i < n; i++)
             System.out.println(words[i]);
         
-        // String str = sc.next();
-        // char[] chars = str.toCharArray();
-        // Arrays.sort(chars);
-        // String sortedStr = new String(chars);
-        // System.out.println(sortedStr);
+        /**
+        한 글자 정렬
+        String str = sc.next();
+        char[] chars = str.toCharArray();
+        Arrays.sort(chars);
+        String sortedStr = new String(chars);
+        System.out.println(sortedStr);
+        */
 
-        // int n = sc.nextInt();
-        // Integer[] arr = new Integer[n]; 
-        // Integer[] arr2 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
-        // Arrays.sort(arr2, Collections.reverseOrder());
-        // for(int i = 0; i < n; i++)
-        //     arr[i] = sc.nextInt();
+        /**
+        숫자 정렬
+        int n = sc.nextInt();
+        Integer[] arr = new Integer[n]; 
+        Integer[] arr2 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+        Arrays.sort(arr2, Collections.reverseOrder());
+        for(int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
+        */
         
-        // Arrays.sort(arr);
-        // for(int i : arr)
-        //     System.out.print(i + " ");
-        // System.out.println();
-        // Arrays.sort(arr,Collections.reverseOrder());
-        // for(int i : arr)
-        //     System.out.print(i + " ");
+        /**
+        숫자 역순 정렬
+        Arrays.sort(arr);
+        for(int i : arr)
+            System.out.print(i + " ");
+        System.out.println();
+        Arrays.sort(arr,Collections.reverseOrder());
+        for(int i : arr)
+            System.out.print(i + " ");
+        */
     }
 }
