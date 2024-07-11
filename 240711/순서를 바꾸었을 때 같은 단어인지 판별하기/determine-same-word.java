@@ -10,17 +10,13 @@ public class Main {
         String str1 = sc.next();
 
         char[] chars = str.toCharArray();
-        char[] chars1 = str.toCharArray();
+        char[] chars1 = str1.toCharArray();
 
         Arrays.sort(chars);
         Arrays.sort(chars1);
 
         String sortedStr = new String(chars);
         String sortedStr1 = new String(chars1);
-
-        System.out.println(sortedStr);
-        System.out.println(sortedStr1);
-
         
         if(sortedStr.equals(sortedStr1))
             System.out.print("Yes");
