@@ -17,6 +17,10 @@ public class Main {
 
         String sortedStr = new String(chars);
         String sortedStr1 = new String(chars1);
+
+        System.out.println(sortedStr);
+        System.out.println(sortedStr1);
+
         
         if(sortedStr.equals(sortedStr1))
             System.out.print("Yes");
