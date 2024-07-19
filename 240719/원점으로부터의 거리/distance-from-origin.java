@@ -13,7 +13,7 @@ class Distance implements Comparable<Distance>{
     @Override 
     public int compareTo(Distance distance){
         int thisDistance = Math.abs(this.x) + Math.abs(this.y);
-        int otherDistance = distance.x + distance.y;
+        int otherDistance = Math.abs(distance.x) + Math.abs(distance.y);
         return thisDistance - otherDistance;
     }
 }
