@@ -13,7 +13,7 @@ class Distance implements Comparable<Distance>{
     @Override 
     public int compareTo(Distance distance){
         if(this.h == distance.h)
-            return this.w - distance.w;
+            return distance.w - this.w;
         return this.h - this.h;
     }
 }
