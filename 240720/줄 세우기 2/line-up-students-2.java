@@ -14,7 +14,7 @@ class Distance implements Comparable<Distance>{
     public int compareTo(Distance distance){
         if(this.h == distance.h)
             return distance.w - this.w;
-        return this.h - this.h;
+        return this.h - distance.h;
     }
 }
 
