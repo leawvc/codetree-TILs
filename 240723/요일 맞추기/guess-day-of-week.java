@@ -11,7 +11,7 @@ public class Main {
 
         int[] num_of_days = new int[]{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-        String[] month = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+        String[] month = new String[]{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
         int day1 = d1;
         int day2 = d2;
@@ -19,9 +19,11 @@ public class Main {
             day1 += num_of_days[i];
         for(int i = 0; i < m2; i++)
             day2 += num_of_days[i];
-        if(day1 - day2 > 0)
-            System.out.print(month[(day1 - day2) % 7 - 1]);
-        else if(day1 - day2 <= 0)
-            System.out.print(month[(day2 - day1) % 7 + 1]);
+
+        int value = day2 - day1;
+        int day = (value % 7 + 7) % 7;
+
+        System.out.print(month[day]); 
+        
     }
 }
