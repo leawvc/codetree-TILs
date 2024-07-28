@@ -13,7 +13,7 @@ public class Main {
             cnt *= 2;
         }
         sum *= 17;
-        int num = 0;
+        long num = 0;
         cnt = 1;
         while(sum > 0){
             num += sum % 2 * cnt;
