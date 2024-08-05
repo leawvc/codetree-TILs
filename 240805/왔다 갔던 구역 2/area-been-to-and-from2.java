@@ -11,13 +11,12 @@ public class Main {
         for(int i = 0; i < n; i++){
             int a = sc.nextInt();
             String b = sc.next();
-            if(b.equals('L')){
-                for(int j = a; j <= 0; j++)
-                    arr[offset + j]++;
-            }else{
-                for(int j = 0; j <= a; j++)
-                    arr[offset + j]++;
-            }
+            if(b.equals('L'))
+                offset -= a;
+            else
+                offset += a;
+            for(int j = 0; j <= a; j++)
+                arr[offset + j]++;
         }
         int cnt = 0;
         for(int i = 0; i < 201; i++){
