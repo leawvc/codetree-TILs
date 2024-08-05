@@ -4,31 +4,33 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int offset = 2000;
         int n = sc.nextInt();
-        int [] arr = new int [4001];
-        
-        for(int i = 0; i < n; i++){
+        int[] arr = new int[4001];
+        int offset = 2000;
+
+        for (int i = 0; i < n; i++) {
             int a = sc.nextInt();
             String b = sc.next();
-            if(b.equals("L")){
-                for(int j = 0; j < a; j++){
+
+            if (b.equals("L")) {
+                for (int j = 0; j < a; j++) {
                     offset--;
                     arr[offset]++;
                 }
-            }
-            else{
-                for(int j = 0; j < a; j++){
+            } else {
+                for (int j = 0; j < a; j++) {
                     offset++;
                     arr[offset]++;
                 }
             }
         }
-        int cnt = 0;
-        for(int i = 0; i < arr.length; i++){
-            if(2 <= arr[i])
-                cnt++;
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= 2) {
+                count++;
+            }
         }
-        System.out.print(cnt);
+
+        System.out.println(count);
     }
 }
