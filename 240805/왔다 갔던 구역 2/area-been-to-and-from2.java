@@ -13,10 +13,10 @@ public class Main {
             String b = sc.next();
             if(b.equals('L')){
                 for(int j = a; j <= 0; j++)
-                    arr[offset + i]++;
+                    arr[offset + j]++;
             }else{
                 for(int j = 0; j <= a; j++)
-                    arr[offset + i]++;
+                    arr[offset + j]++;
             }
         }
         int cnt = 0;
