@@ -14,13 +14,13 @@ public class Main {
 
             if (b.equals("L")) {
                 for (int j = 0; j < a; j++) {
-                    offset--;
                     arr[offset]++;
+                    offset--;
                 }
             } else {
                 for (int j = 0; j < a; j++) {
-                    offset++;
                     arr[offset]++;
+                    offset++;
                 }
             }
         }
