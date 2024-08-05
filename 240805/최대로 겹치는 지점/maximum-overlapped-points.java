@@ -11,7 +11,7 @@ public class Main {
             int a = sc.nextInt();
             int b = sc.nextInt();
             for(int j = a; j <= b; j++)
-                arr[1 + j]++;
+                arr[j]++;
         }
         int max = arr[0];
         for(int i = 0; i < 101; i++){
