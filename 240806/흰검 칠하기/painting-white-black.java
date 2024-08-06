@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int[][] arr = new int[4001][2];
+        int[] arr = new int[4001];
         String [] str = new String[4001];
         int offset = 2000;
         for (int i = 0; i < str.length; i++) {
@@ -16,20 +16,27 @@ public class Main {
             String b = sc.next();
 
             if (b.equals("L")) {
-                offset++;
-                for (int j = 0; j < a; j++) {
-                    offset--;
-                    arr[offset][0]++;
-                    arr[offset][1]++;
+                if (a == 1){
+                    arr[offset]++;
                     str[offset] = "white";
+                } else{
+                    for (int j = 0; j < a; j++) {
+                        offset--;
+                        arr[offset]++;
+                        str[offset] = "white";
+                    }
                 }
             } else {
-                offset--;
-                for (int j = 0; j < a; j++) {
-                    arr[offset][0]++;
-                    arr[offset][1] += 3;
+                if (a == 1){
+                    arr[offset]++;
                     str[offset] = "black";
-                    offset++;
+                } else{
+                    for (int j = 0; j < a; j++) {
+                        arr[offset]++;
+                        str[offset] = "black";
+                        offset++;
+                    }
+                    offset--;
                 }
             }
         }
@@ -37,7 +44,7 @@ public class Main {
         int black = 0;
         int gray = 0;
         for (int i = 0; i < arr.length; i++) {
-            if(arr[i][0] == 4)
+            if(arr[i] >= 4)
                 gray++;
             else if(str[i].equals("white"))
                 white++;
