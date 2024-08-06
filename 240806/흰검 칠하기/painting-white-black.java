@@ -6,11 +6,12 @@ public class Main {
 
         int n = sc.nextInt();
         int[] arr = new int[4001];
-        String [] str = new String[4001];
+        String[] str = new String[4001];
         int offset = 2000;
         for (int i = 0; i < str.length; i++) {
             str[i] = "";
         }
+
         for (int i = 0; i < n; i++) {
             int a = sc.nextInt();
             String b = sc.next();
@@ -19,11 +20,12 @@ public class Main {
                 if (a == 1){
                     arr[offset]++;
                     str[offset] = "white";
-                } else{
+                } else {
                     for (int j = 0; j < a; j++) {
+                        offset--;
+                        if (offset < 0 || offset >= 4001) break;  // offset 범위 체크
                         arr[offset]++;
                         str[offset] = "white";
-                        offset--;
                     }
                     offset++;
                 }
@@ -31,8 +33,9 @@ public class Main {
                 if (a == 1){
                     arr[offset]++;
                     str[offset] = "black";
-                } else{
+                } else {
                     for (int j = 0; j < a; j++) {
+                        if (offset < 0 || offset >= 4001) break;  // offset 범위 체크
                         arr[offset]++;
                         str[offset] = "black";
                         offset++;
@@ -41,19 +44,17 @@ public class Main {
                 }
             }
         }
+
         int white = 0;
         int black = 0;
         int gray = 0;
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] >= 4)
                 gray++;
-                // System.out.println("gray" + i);
             else if(str[i].equals("white"))
                 white++;
-                // System.out.println("white" + i);
             else if(str[i].equals("black"))
                 black++;
-                // System.out.println(i);
         }
         System.out.print(white + " " + black + " " + gray);
     }
