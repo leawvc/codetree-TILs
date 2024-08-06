@@ -16,6 +16,7 @@ public class Main {
             String b = sc.next();
 
             if (b.equals("L")) {
+                offset++;
                 for (int j = 0; j < a; j++) {
                     offset--;
                     arr[offset][0]++;
@@ -23,6 +24,7 @@ public class Main {
                     str[offset] = "white";
                 }
             } else {
+                offset--;
                 for (int j = 0; j < a; j++) {
                     arr[offset][0]++;
                     arr[offset][1] += 3;
