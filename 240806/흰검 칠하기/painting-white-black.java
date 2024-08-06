@@ -21,10 +21,11 @@ public class Main {
                     str[offset] = "white";
                 } else{
                     for (int j = 0; j < a; j++) {
-                        offset--;
                         arr[offset]++;
                         str[offset] = "white";
+                        offset--;
                     }
+                    offset++;
                 }
             } else {
                 if (a == 1){
@@ -46,10 +47,13 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] >= 4)
                 gray++;
+                // System.out.println("gray" + i);
             else if(str[i].equals("white"))
                 white++;
+                // System.out.println("white" + i);
             else if(str[i].equals("black"))
                 black++;
+                // System.out.println(i);
         }
         System.out.print(white + " " + black + " " + gray);
     }
