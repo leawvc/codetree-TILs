@@ -9,21 +9,20 @@ public class Main {
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
         }
-        int max = 0;
+        int max = 1;
+        int value = 1;
         for(int i = 0; i < n; i++){
-            if(i == 0 || arr[i] == arr[i - 1])
-                max++;
-            else
-                break;
-        }
-        int value = 0;
-        for(int i = 0; i < n; i++){
-            if(i == 0 || arr[i] == arr[i - 1])
+            if(arr[i] == arr[i - 1]) {
                 value++;
-            else if(value > max){
-                max = value;
-                value = 0;
+            } else {
+                if(value > max) {
+                    max = value;
+                }
+                value = 1;
             }
+        }
+        if(value > max) {
+            max = value;
         }
         System.out.print(max);
     }
