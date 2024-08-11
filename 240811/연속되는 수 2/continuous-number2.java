@@ -11,14 +11,14 @@ public class Main {
         }
         int min = 0;
         for(int i = 0; i < n; i++){
-            if(i == 0 || arr[i] != arr[i - 1])
+            if(i == 0 || arr[i] == arr[i - 1])
                 min++;
             else
                 break;
         }
         int max = 0;
         for(int i = 0; i < n; i++){
-            if(i == 0 || arr[i] == arr[i - 1])
+            if(i == 0 || arr[i] != arr[i - 1])
                 max++;
             else if(max > min){
                 min = max;
