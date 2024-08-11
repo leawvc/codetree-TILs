@@ -5,28 +5,27 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        if (n == 0) {
-            System.out.print(0);
-            return;
-        }
         int arr [] = new int[n];
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
         }
-        int max = 1;
-        int value = 1;
+        int max = 0;
         for(int i = 0; i < n; i++){
-            if(arr[i] == arr[i - 1]) {
-                value++;
-            } else {
-                if(value > max) {
-                    max = value;
-                }
-                value = 1;
-            }
+            if(i == 0 || arr[i] == arr[i - 1])
+                max++;
+            else
+                break;
         }
-        if(value > max) {
-            max = value;
+        int value = 0;
+        for(int i = 0; i < n; i++){
+            if(i == 0 || arr[i] == arr[i - 1]){
+                value++;
+                // System.out.print(value);
+            }
+            else if(value > max){
+                max = value;
+                value = 0;
+            }
         }
         System.out.print(max);
     }
