@@ -9,22 +9,22 @@ public class Main {
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
         }
-        int min = 0;
+        int max = 0;
         for(int i = 0; i < n; i++){
             if(i == 0 || arr[i] == arr[i - 1])
-                min++;
+                max++;
             else
                 break;
         }
-        int max = 0;
+        int value = 0;
         for(int i = 0; i < n; i++){
-            if(i == 0 || arr[i] != arr[i - 1])
-                max++;
-            else if(max > min){
-                min = max;
-                max = 0;
+            if(i == 0 || arr[i] == arr[i - 1])
+                value++;
+            else if(value > max){
+                max = value;
+                value = 0;
             }
         }
-        System.out.print(min);
+        System.out.print(max);
     }
 }
