@@ -14,7 +14,7 @@ public class Main {
                 // System.out.print("cnt : " + cnt);
                 // System.out.println(" i : " + i);
             }
-            else if(cnt > max){
+            else if(cnt >= max){
                 max = cnt + 1;
                 cnt = 0;
             }
