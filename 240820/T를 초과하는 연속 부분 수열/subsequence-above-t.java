@@ -26,6 +26,9 @@ public class Main {
                 plus = 1;
             }
         }
+        if(plus > max_plus) {
+            max_plus = plus;
+        }
         for(int i = 1; i < n; i++){
             if((arr[i - 1] > arr[i]) && (arr[i - 1] > t))
                 minus++;
@@ -35,6 +38,9 @@ public class Main {
                 }
                 minus = 1;
             }
+        }
+        if(minus > max_minus) {
+            max_minus = minus;
         }
         if(max_minus > max_plus)
             System.out.print(max_minus);
