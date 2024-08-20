@@ -19,6 +19,8 @@ public class Main {
                 cnt = 1;
             }
         }
+        if(cnt > max)
+            max = cnt;
         System.out.print(max);
     }
 }
