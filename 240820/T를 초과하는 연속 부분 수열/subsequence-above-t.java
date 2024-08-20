@@ -16,9 +16,9 @@ public class Main {
             arr[i] = sc.nextInt();
         int max = 0, a = 1, b = 1, cnt = 0;
         for(int i = 1; i < n; i++){
-            if((arr[i - 1] < arr[i]) && (t < arr[i - 1]))
+            if((arr[i - 1] < arr[i]) && (t < arr[i]))
                 a++;
-            else if((arr[i - 1] > arr[i]) && (t < arr[i - 1]))
+            else if((arr[i - 1] > arr[i]) && (t < arr[i]))
                 b++;
             else {
                 cnt = value(a, b);
