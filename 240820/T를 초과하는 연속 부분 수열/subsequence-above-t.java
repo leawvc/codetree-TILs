@@ -1,37 +1,44 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int value(int a, int b){
-        if(a > b)
-            return a;
-        return b;
-    }
+    // public static int max_value(int plus, int minus){
+    //     if(plus > minus)
+    //         return plus;
+    //     return minus;
+    // }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
         int t = sc.nextInt();
-        int arr [] = new int [1000];
+        int arr[] = new int[1000];
+
         for(int i = 0; i < n; i++)
             arr[i] = sc.nextInt();
-        int max = 0, a = 1, b = 1, cnt = 0;
+        int max_plus = 0, max_minus = 0, plus = 1, minus = 1;
         for(int i = 1; i < n; i++){
-            if((arr[i - 1] < arr[i]) && (t < arr[i]))
-                a++;
-            else if((arr[i - 1] > arr[i]) && (t < arr[i]))
-                b++;
-            else {
-                cnt = value(a, b);
-                if (cnt > max) {
-                    max = cnt;
+            if((arr[i - 1] < arr[i]) && (arr[i - 1] > t))
+                plus++;
+            else{
+                if(plus > max_plus){
+                    max_plus = plus;
                 }
-                a = 1;
-                b = 1;
+                plus = 1;
             }
         }
-        cnt = value(a, b);
-        if(cnt > max)
-            max = cnt;
-        System.out.print(max);
+        for(int i = 1; i < n; i++){
+            if((arr[i - 1] > arr[i]) && (arr[i - 1] > t))
+                minus++;
+            else{
+                if(minus > max_minus){
+                    max_minus = minus;
+                }
+                minus = 1;
+            }
+        }
+        if(max_minus > max_plus)
+            System.out.print(max_minus);
+        else
+            System.out.print(max_plus);
     }
 }
