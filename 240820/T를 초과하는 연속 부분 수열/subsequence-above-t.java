@@ -1,50 +1,37 @@
 import java.util.Scanner;
 
 public class Main {
-    // public static int max_value(int plus, int minus){
-    //     if(plus > minus)
-    //         return plus;
-    //     return minus;
-    // }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
-        int t = sc.nextInt();
-        int arr[] = new int[1000];
+        int n = sc.nextInt();  // 수열의 길이
+        int t = sc.nextInt();  // 기준 값
+        int arr[] = new int[n];
 
-        for(int i = 0; i < n; i++)
-            arr[i] = sc.nextInt();
-        int max_plus = 0, max_minus = 0, plus = 1, minus = 1;
-        for(int i = 1; i < n; i++){
-            if((arr[i - 1] < arr[i]) && (arr[i - 1] > t))
-                plus++;
-            else{
-                if(plus > max_plus){
-                    max_plus = plus;
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();  // 수열 입력
+        }
+
+        int maxLen = 0;  // 최대 길이
+        int currentLen = 0;  // 현재 연속 부분 수열의 길이
+
+        for(int i = 0; i < n; i++) {
+            if(arr[i] > t) {
+                currentLen++;  // t보다 크면 길이 증가
+            } else {
+                // t보다 크지 않으면 최대 길이 갱신 후, 길이 초기화
+                if(currentLen > maxLen) {
+                    maxLen = currentLen;
                 }
-                plus = 1;
+                currentLen = 0;
             }
         }
-        if(plus > max_plus) {
-            max_plus = plus;
+
+        // 마지막 구간을 처리
+        if(currentLen > maxLen) {
+            maxLen = currentLen;
         }
-        for(int i = 1; i < n; i++){
-            if((arr[i - 1] > arr[i]) && (arr[i - 1] > t))
-                minus++;
-            else{
-                if(minus > max_minus){
-                    max_minus = minus;
-                }
-                minus = 1;
-            }
-        }
-        if(minus > max_minus) {
-            max_minus = minus;
-        }
-        if(max_minus > max_plus)
-            System.out.print(max_minus);
-        else
-            System.out.print(max_plus);
+
+        System.out.println(maxLen);  // 최대 길이 출력
     }
 }
