@@ -32,9 +32,9 @@ public class Main {
         }
         int cnt = 0;
         for(int i = 0; i < a.size() -1; i++){
-            if(a.get(i) - b.get(i) < 0 && a.get(i + 1) - b.get(i + 1) > 0)
+            if(a.get(i) - b.get(i) <= 0 && a.get(i + 1) - b.get(i + 1) > 0)
                 cnt++;
-            else if(a.get(i) - b.get(i) > 0 && a.get(i + 1) - b.get(i + 1) < 0)
+            else if(a.get(i) - b.get(i) >= 0 && a.get(i + 1) - b.get(i + 1) < 0)
                 cnt++;
         }
         if(cnt != 0)
