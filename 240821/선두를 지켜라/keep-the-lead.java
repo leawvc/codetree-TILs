@@ -30,11 +30,15 @@ public class Main {
         }
         int cnt = 0;
         boolean aIsLeading = true;
-        for(int i = 0; i < a.size() -1; i++){
-            if(a.get(i) - b.get(i) <= 0 && a.get(i + 1) - b.get(i + 1) > 0)
+        for(int i = 0; i < a.size(); i++){
+            if(aIsLeading == true && a.get(i) - b.get(i) < 0){
                 cnt++;
-            else if(a.get(i) - b.get(i) > 0 && a.get(i + 1) - b.get(i + 1) < 0)
+                aIsLeading = false;
+            }
+            else if(aIsLeading == false && a.get(i) - b.get(i) > 0){
                 cnt++;
+                aIsLeading = true;
+            }
         }
         if(cnt != 0)
             System.out.print(cnt);
