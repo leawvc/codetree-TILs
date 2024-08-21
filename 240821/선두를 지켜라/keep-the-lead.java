@@ -41,9 +41,6 @@ public class Main {
                 aIsLeading = 2;
             }
         }
-        if(cnt != 0)
-            System.out.print(cnt);
-        else
-            System.out.print(-1);
+        System.out.print(cnt);
     }
 }
