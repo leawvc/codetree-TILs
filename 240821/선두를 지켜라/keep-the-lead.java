@@ -28,16 +28,17 @@ public class Main {
                 b.add(num);
             }
         }
-        int cnt = 0;
-        boolean aIsLeading = true;
+        int cnt = 0, aIsLeading = 0;
         for(int i = 0; i < a.size(); i++){
-            if(aIsLeading == true && a.get(i) - b.get(i) < 0){
-                cnt++;
-                aIsLeading = false;
+            if(a.get(i) > b.get(i)){
+                if(aIsLeading == 2)
+                    cnt++;
+                aIsLeading = 1;
             }
-            else if(aIsLeading == false && a.get(i) - b.get(i) > 0){
-                cnt++;
-                aIsLeading = true;
+            else if(a.get(i) < b.get(i)){
+                if(aIsLeading == 1)
+                    cnt++;
+                aIsLeading = 2;
             }
         }
         if(cnt != 0)
