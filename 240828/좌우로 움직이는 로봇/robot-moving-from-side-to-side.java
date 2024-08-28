@@ -40,7 +40,8 @@ public class Main {
             }
         }
         cnt = 0;
-        for(int i = 1; i < A.size(); i++){
+        int min = Math.min(A.size(), B.size());
+        for(int i = 1; i < min; i++){
             if(A.get(i) == B.get(i))
                 cnt++;
         }
